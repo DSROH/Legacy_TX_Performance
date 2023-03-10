@@ -6,7 +6,6 @@ import tkinter.scrolledtext as st
 import threading
 import Function as func
 
-# %%
 Win_GUI = ttkbst.Window(title="ET Performance Drawing", themename="cosmo")
 Win_GUI.attributes("-topmost", True)
 Win_GUI.geometry("865x510")
