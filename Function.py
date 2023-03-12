@@ -405,8 +405,8 @@ def ET_perf_drawing(Win_GUI, Entry_file_path, text_area):
         text_area.see(tk.END)
 
         open_file(f_name)
-
         Win_GUI.destroy()
+        Win_GUI.quit()
 
     except Exception as e:
         msg.showwarning("Warning", e)

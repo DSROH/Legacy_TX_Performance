@@ -6,6 +6,7 @@ import tkinter.scrolledtext as st
 import threading
 import Function as func
 
+
 Win_GUI = ttkbst.Window(title="ET Performance Drawing", themename="cosmo")
 Win_GUI.attributes("-topmost", True)
 Win_GUI.geometry("865x510")
@@ -44,6 +45,13 @@ Win_GUI.bind(
         threading.Thread(target=func.ET_perf_drawing, args=(Win_GUI, Entry_file_path, text_area)).start(),
     ],
 )
+
+
+def Win_GUI_close():
+    Win_GUI.quit()
+
+
+Win_GUI.protocol("WM_DELETE_WINDOW", Win_GUI_close)
 
 Win_GUI.resizable(False, False)
 Win_GUI.focus()
